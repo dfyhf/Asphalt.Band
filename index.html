@@ -55,10 +55,15 @@
 
     .login-box h1 {
       margin-bottom: 1rem;
-      font-size: 1.8rem;
+      font-size: 2.6rem;
       color: #992222;
       letter-spacing: 2px;
-      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+      text-shadow:
+        1px 1px 1px rgba(0, 0, 0, 0.8),
+        2px 2px 2px rgba(0, 0, 0, 0.5),
+        -1px -1px 1px rgba(0, 0, 0, 0.6),
+        0 0 4px rgba(120, 30, 30, 0.2);
+      animation: emberPulse 3s ease-in-out infinite;
     }
 
     .login-box input {
@@ -118,6 +123,23 @@
       font-size: 0.75rem;
       color: #333;
       z-index: 2;
+    }
+
+    @keyframes emberPulse {
+      0%, 100% {
+        text-shadow:
+          1px 1px 1px rgba(0, 0, 0, 0.8),
+          2px 2px 2px rgba(0, 0, 0, 0.5),
+          -1px -1px 1px rgba(0, 0, 0, 0.6),
+          0 0 4px rgba(120, 30, 30, 0.2);
+      }
+      50% {
+        text-shadow:
+          1px 1px 1px rgba(0, 0, 0, 0.8),
+          2px 2px 2px rgba(0, 0, 0, 0.5),
+          -1px -1px 1px rgba(0, 0, 0, 0.6),
+          0 0 8px rgba(200, 60, 60, 0.4);
+      }
     }
   </style>
 </head>
